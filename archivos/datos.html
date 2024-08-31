@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Datos</title>
+</head>
+<body>
+    <h1>Agregar Datos al Sistema de Ventas</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        <h2>Dirección</h2>
+        {{ direccion_form.as_p }}
+        
+        <h2>Proveedor</h2>
+        {{ proveedor_form.as_p }}
+        
+        <h2>Cliente</h2>
+        {{ cliente_form.as_p }}
+        
+        <h2>Teléfono</h2>
+        {{ telefono_form.as_p }}
+        
+        <h2>Categoría</h2>
+        {{ categoria_form.as_p }}
+        
+        <h2>Producto</h2>
+        {{ producto_form.as_p }}
+        
+        <h2>Venta</h2>
+        {{ venta_form.as_p }}
+        
+        <h2>Detalle de Venta</h2>
+        {{ detalle_venta_form.as_p }}
+        
+        <button type="submit">Agregar Datos</button>
+    </form>
+</body>
+</html>
